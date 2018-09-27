@@ -15,6 +15,7 @@
         "@angular/compiler": "7.0.1",
         "@angular/compiler-cli": "7.0.1",
         "@angular/core": "7.0.1",
+        "@bazel/bazel": "~0.19.0",
         "@bazel/benchmark-runner": "0.1.0",
         "@bazel/ibazel": "0.5.0",
         "@bazel/karma": "0.20.3",
