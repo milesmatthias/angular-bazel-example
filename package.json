@@ -4,7 +4,7 @@
     "description": "Demo of bazel rules for angular",
     "license": "Apache 2.0",
     "dependencies": {
-        "@ngrx/store": "6.1.0",
+        "@ngrx/store": "6.1.2",
         "rxjs": "6.3.3",
         "systemjs": "0.21.5",
         "tslib": "1.9.3",
