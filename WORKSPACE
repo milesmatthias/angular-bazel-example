@@ -39,26 +39,11 @@ http_archive(
 load("@build_bazel_rules_typescript//:package.bzl", "rules_typescript_dependencies")
 rules_typescript_dependencies()
 
-# Runs the Sass CSS preprocessor
-http_archive(
-    name = "io_bazel_rules_sass",
-    url = "https://github.com/bazelbuild/rules_sass/archive/1.11.0.zip",
-    strip_prefix = "rules_sass-1.11.0",
-)
-
 # Rules for compiling sass
 http_archive(
     name = "io_bazel_rules_sass",
     url = "https://github.com/bazelbuild/rules_sass/archive/1.14.1.zip",
     strip_prefix = "rules_sass-1.14.1",
-)
-
-# This local_repository rule is needed to prevent `bazel build ...` from
-# drilling down into the @rxjs workspace BUILD files in node_modules/rxjs/src.
-# In the future this will no longer be needed.
-local_repository(
-    name = "ignore_node_modules_rxjs",
-    path = "node_modules/rxjs/src",
 )
 
 ####################################
