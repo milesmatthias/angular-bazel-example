@@ -32,10 +32,6 @@ http_archive(
     sha256 = "72b0b4e517f43358f554c125e40e39f67688cd2738a8998b4a266981ed32f403",
 )
 
-# Fetch our Bazel dependencies that aren't distributed on npm
-load("@build_bazel_rules_typescript//:package.bzl", "rules_typescript_dependencies")
-rules_typescript_dependencies()
-
 # Rules for compiling sass
 http_archive(
     name = "io_bazel_rules_sass",
