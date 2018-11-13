@@ -50,14 +50,6 @@ http_archive(
     strip_prefix = "rules_sass-1.14.1",
 )
 
-# This local_repository rule is needed to prevent `bazel build ...` from
-# drilling down into the @rxjs workspace BUILD files in node_modules/rxjs/src.
-# In the future this will no longer be needed.
-local_repository(
-    name = "ignore_node_modules_rxjs",
-    path = "node_modules/rxjs/src",
-)
-
 ####################################
 # Load and install our dependencies downloaded above.
 
@@ -68,7 +60,9 @@ rules_angular_dependencies()
 load("@build_bazel_rules_nodejs//:defs.bzl", "check_bazel_version", "node_repositories", "yarn_install")
 
 # The minimum bazel version to use with this example repo is 0.17.1
-check_bazel_version("0.17.1")
+# Bazel 0.19 supports the .bazelignore file
+check_bazel_version("0.19.1")
+
 node_repositories(
     node_version = "10.9.0",
     yarn_version = "1.9.2",
