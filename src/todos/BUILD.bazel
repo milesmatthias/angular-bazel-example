@@ -13,8 +13,13 @@ sass_binary(
 ng_module(
     name = "todos",
     srcs = [
+        "todo.ts",
         "todos.component.ts",
         "todos.module.ts",
+        "todos.service.ts",
+        "in-memory-data.service.ts",
+        "http-error-handler.service.ts",
+        "message.service.ts",
     ],
     assets = [
         "todos.component.html",
@@ -25,6 +30,7 @@ ng_module(
         "//src/lib",
         "//src/material",
         "//src/reducers",
+				"angular-in-memory-web-api",
         "@angular//packages/common",
         "@angular//packages/core",
         "@angular//packages/forms",
