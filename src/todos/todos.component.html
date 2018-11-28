@@ -22,10 +22,10 @@
 </button>
 
 <ul>
-  <li *ngFor="let todo of todos$ | async; let i = index;">
-    <span [class.done]="todo.done">{{ todo.value }}</span>
-    <button mat-raised-button (click)="editTodo(todo, i)">Edit</button>
-    <button mat-raised-button (click)="toggleDone(todo, i)">Toggle Done</button>
-    <button mat-raised-button color="warn" (click)="deleteTodo(i)">X</button>
+  <li *ngFor="let todo of todos">
+    <span [class.done]="todo.done">{{ todo.done }}</span>
+    <button mat-raised-button (click)="editTodo(todo)">Edit</button>
+    <button mat-raised-button (click)="toggleDone(todo)">Toggle Done</button>
+    <button mat-raised-button color="warn" (click)="deleteTodo(todo.id)">X</button>
   </li>
 </ul>

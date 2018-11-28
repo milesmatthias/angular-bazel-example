@@ -59,11 +59,23 @@
   dependencies:
     tslib "^1.9.0"
 
+"@angular/http@^7.1.0":
+  version "7.1.0"
+  resolved "https://registry.yarnpkg.com/@angular/http/-/http-7.1.0.tgz#9243d6a0fae5b5fd12aa9408e3dbaffad54deb9b"
+  dependencies:
+    tslib "^1.9.0"
+
 "@angular/material@7.0.4":
   version "7.0.4"
   resolved "https://registry.yarnpkg.com/@angular/material/-/material-7.0.4.tgz#946de5ca415bd2cb0330f520011e3dd5361654d1"
   dependencies:
     tslib "^1.7.1"
+
+"@angular/platform-browser@^7.1.0":
+  version "7.1.0"
+  resolved "https://registry.yarnpkg.com/@angular/platform-browser/-/platform-browser-7.1.0.tgz#0d40fed536a08d66ea580f6c4d2976310d559111"
+  dependencies:
+    tslib "^1.9.0"
 
 "@bazel/bazel-darwin_x64@0.19.1":
   version "0.19.1"
@@ -202,9 +214,9 @@ amqplib@^0.5.2:
     readable-stream "1.x >=1.1.9"
     safe-buffer "^5.0.1"
 
-angular-in-memory-web-api@^0.7.0:
-  version "0.7.0"
-  resolved "https://registry.yarnpkg.com/angular-in-memory-web-api/-/angular-in-memory-web-api-0.7.0.tgz#a6ea4cf7aa0d1edc369dd41f26c87e785460c3d3"
+angular-in-memory-web-api@^0.6.1:
+  version "0.6.1"
+  resolved "https://registry.yarnpkg.com/angular-in-memory-web-api/-/angular-in-memory-web-api-0.6.1.tgz#d1eb1849517fe60487c2287388606bf1c4f84dfb"
 
 ansi-regex@^2.0.0:
   version "2.1.1"

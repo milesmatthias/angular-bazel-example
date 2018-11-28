@@ -23,6 +23,7 @@ ng_module(
         "//src/hello-world",
         "//src/material",
         "//src/todos",
+				"@npm//angular-in-memory-web-api",
         "@angular//packages/core",
         "@angular//packages/router",
         "@npm//@ngrx/store",

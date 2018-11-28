@@ -12,9 +12,10 @@ import {ADD_TODO, DELETE_TODO, TOGGLE_DONE, UPDATE_TODO} from '../reducers/reduc
   styleUrls: ['./todos.component.css']
 })
 export class TodosComponent implements OnInit {
+	todo: string;
   todos: Todo[];
-  editTodo: Todo;
   editing = false;
+	indexToEdit: number|null;
 
   constructor(private todosService: TodosService) {}
 
@@ -27,12 +28,12 @@ export class TodosComponent implements OnInit {
 			.subscribe(todos => this.todos = todos);
 	}
 
-  addTodo(title: string): void {
+  addTodo(name: string): void {
 		this.editTodo = undefined;
-    title = title.trim();
-    if (!title) { return; }
+    name = name.trim();
+    if (!name) { return; }
 
-    const newTodo: Todo = { title } as Todo;
+    const newTodo: Todo = { name } as Todo;
     this.todosService.addTodo(newTodo)
       .subscribe(todo => this.todos.push(todo));
 
@@ -40,7 +41,7 @@ export class TodosComponent implements OnInit {
 		// this.todo = '';
   }
 
-  deleteTodo(index) {
+  deleteTodo(id) {
 		// this.store.dispatch({type: DELETE_TODO, payload: {index}});
   }
 
@@ -50,11 +51,13 @@ export class TodosComponent implements OnInit {
 		// this.indexToEdit = null;
   }
 
-  updateTodo(updatedTodo) {
-		// this.editing = true;
-		// this.todo = todo.value;
-		// this.indexToEdit = index;
+  editTodo(todo) {
+  // this.editing = true;
+  // this.todo = todo.value;
+  // this.indexToEdit = index;
+	}
 
+  updateTodo(updatedTodo) {
 		// this.store.dispatch(
 		// {type: UPDATE_TODO, payload: {index: this.indexToEdit, newValue: updatedTodo}});
 		// this.todo = '';
@@ -62,7 +65,7 @@ export class TodosComponent implements OnInit {
 		// this.editing = false;
   }
 
-  toggleDone(todo, index) {
+  toggleDone(todo) {
   // this.store.dispatch({type: TOGGLE_DONE, payload: {index, done: todo.done}});
   }
 }

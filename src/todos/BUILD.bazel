@@ -30,7 +30,7 @@ ng_module(
         "//src/lib",
         "//src/material",
         "//src/reducers",
-				"angular-in-memory-web-api",
+				"@npm//angular-in-memory-web-api",
         "@angular//packages/common",
         "@angular//packages/core",
         "@angular//packages/forms",
